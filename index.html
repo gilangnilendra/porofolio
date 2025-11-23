@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gilang</title>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <section class="hero">
+            <div class="profile-wrapper">
+                <img src="glng.jpeg" alt="Foto Gilang" class="hero-img">
+                <h1 class="hero-name">Gilang Nilendra</h1>
+                <p class="hero-desc">Mahasiswa Teknik Informatika yang serius ngembangin skill sebagai Developer in
+                    Training.</p>
+                <div class="menu-wrapper">
+                    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#projects">Projek</a></li>
+                        <li><a href="https://github.com/gilangnilendra" target="_blank">GitHub</a></li>
+                    </ul>
+                    <div class="menu-overlay" id="menu-overlay"></div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section id="about" class="about">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah developer in progress yang fokus bikin website modern, clean, dan responsif. Aku suka eksplor
+            teknologi baru, ngulik UI/UX, dan bikin tampilan yang nyaman dipake user. Goal utamanya: build something
+            useful, simple, dan impactful.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projek</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Projek 1</h3>
+                <p>Deskripsi singkat mengenai projek Anda.</p>
+                <a href="subPage/P2.html" class="btn-small" target="_blank">Lihat</a>
+            </div>
+            <div class="project-card">
+                <h3>Projek 2</h3>
+                <p>Deskripsi singkat mengenai projek Anda.</p>
+                <a href="subPage/P3.html" class="btn-small" target="_blank">Lihat</a>
+            </div>
+            <div class="project-card">
+                <h3>Projek 3</h3>
+                <p>Deskripsi singkat mengenai projek Anda.</p>
+                <a href="subPage/P4.html" class="btn-small" target="_blank">Lihat</a>
+            </div>
+            <div class="project-card">
+                <h3>Projek 4</h3>
+                <p>Deskripsi singkat mengenai projek Anda.</p>
+                <a href="subPage/P5.html" class="btn-small" target="_blank">Lihat</a>
+            </div>
+            <div class="project-card">
+                <h3>Projek 5</h3>
+                <p>Deskripsi singkat mengenai projek Anda.</p>
+                <a href="subPage/P6.html" class="btn-small" target="_blank">Lihat</a>
+            </div>
+            <div class="project-card">
+                <h3>Projek 6</h3>
+                <p>Deskripsi singkat mengenai projek Anda.</p>
+                <a href="subPage/P7.html" class="btn-small" target="_blank">Lihat</a>
+            </div>
+            <div class="project-card">
+                <h3>Projek 6</h3>
+                <p>Deskripsi singkat mengenai projek Anda.</p>
+                <a href="subPage/P8.html" class="btn-small" target="_blank">Lihat</a>
+            </div>
+            <div class="project-card">
+                <h3>Projek 6</h3>
+                <p>Deskripsi singkat mengenai projek Anda.</p>
+                <a href="subPage/P9.html" class="btn-small" target="_blank">Lihat</a>
+            </div>
+            <div class="project-card">
+                <h3>Projek 6</h3>
+                <p>Deskripsi singkat mengenai projek Anda.</p>
+                <a href="subPage/P10.html" class="btn-small" target="_blank">Lihat</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Portfolio by Gilang Nilendra</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+        const overlay = document.getElementById("menu-overlay");
+
+        toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            overlay.style.display = navLinks.classList.contains("active") ? "block" : "none";
+        });
+
+        overlay.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            overlay.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

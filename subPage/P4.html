@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 4: Gambar, Suara, dan Video</title>
+    <style>
+        /* Gaya dasar agar konten video lebih rapi */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Materi Pertemuan 4: Menampilkan Video</h1>
+        <hr>
+
+        <h2>1. Embed Video YouTube (Iframe)</h2>
+        <p>Video dari link yang diberikan: https://youtu.be/9orGjtpbLQQ</p>
+        
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/9orGjtpbLQQ" 
+            frameborder="0" ></iframe>
+        
+        <hr>
+        
+        <h2>2. Kontrol Video Lokal dengan JavaScript</h2>
+        <p>Contoh ini menunjukkan kontrol *Play/Pause* dan perubahan ukuran video menggunakan JavaScript.</p>
+
+        <div style="text-align:center">
+            <button onclick="tekanPause()">Play/Pause</button>
+            <button onclick="menjadiBig()">Big</button>
+            <button onclick="menjadiSmall()">Small</button>
+            <button onclick="menjadiNormal()">Normal</button>
+            <br><br>
+            
+            <video id="videoku" width="430">
+                <source src="VideoAA.mp4" type="video/mp4">
+                <source src="VideoBB.ogg" type="video/ogg">
+                Browser anda tidak support video HTML 5. 
+            </video>
+        </div>
+
+    </div>
+
+    <script>
+        var VideoAku = document.getElementById("videoku");
+
+        // Fungsi Play/Pause
+        function tekanPause() {
+            if (VideoAku.paused)
+                VideoAku.play();
+            else
+                VideoAku.pause();
+        }
+
+        // Fungsi mengubah ukuran menjadi besar
+        function menjadiBig() {
+            VideoAku.width = 560;
+        }
+
+        // Fungsi mengubah ukuran menjadi kecil
+        function menjadiSmall() {
+            VideoAku.width = 320;
+        }
+
+        // Fungsi mengubah ukuran menjadi normal (default)
+        function menjadiNormal() {
+            VideoAku.width = 430;
+        }
+    </script>
+</body>
+</html>
